@@ -23,5 +23,18 @@ myLength :: [a] -> Int
 myLength [] = 0
 myLength (x:xs) = 1 + length xs
 
+--Exercise 5 Reverse List
+myReverse :: [a] -> [a]
+myReverse [] = []
+myReverse (x:xs) = myReverse xs ++ [x]
+
+--Exercise 6 Palindrome
+isPalindrome :: (Eq a) => [a] -> Bool
+isPalindrome x 
+		| myReverse x == x =True
+		| otherwise = False
+
+
+
 
 
